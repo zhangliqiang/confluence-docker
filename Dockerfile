@@ -1,4 +1,4 @@
-FROM atlassian/confluence-server:6.13.6
+FROM atlassian/confluence-server:6.15.7
 
 MAINTAINER https://github.com/zhangliqiang/confluence-docker
 
@@ -7,7 +7,3 @@ RUN rm -f /opt/atlassian/confluence/confluence/WEB-INF/lib/atlassian-extras-deco
 ADD jar/atlassian-extras-decoder-v2-3.4.1.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
 
 ADD jar/mysql-connector-java-5.1.40.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
-
-ADD windowsfonts /usr/share/fonts
-
-ENV CATALINA_OPTS=-Dconfluence.document.conversion.fontpath=/usr/share/fonts/windowsfonts/
