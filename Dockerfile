@@ -1,4 +1,4 @@
-FROM atlassian/confluence-server:7.4.16
+FROM atlassian/confluence-server:7.4.17
 
 MAINTAINER https://github.com/zhangliqiang/confluence-docker
 
