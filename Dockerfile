@@ -1,10 +1,10 @@
-FROM atlassian/confluence-server:7.13.7
+FROM atlassian/confluence-server:7.19.4
 
 MAINTAINER https://github.com/zhangliqiang/confluence-docker
 
-RUN rm -f /opt/atlassian/confluence/confluence/WEB-INF/lib/atlassian-extras-decoder-v2-3.4.1.jar
+RUN rm -f /opt/atlassian/confluence/confluence/WEB-INF/lib/atlassian-extras-decoder-v2-3.4.6.jar
 
-ADD jar/atlassian-extras-decoder-v2-3.4.1.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
+ADD jar/atlassian-extras-decoder-v2-3.4.6.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
 
 ADD jar/mysql-connector-java-5.1.49.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
 
