@@ -4,7 +4,7 @@ MAINTAINER https://github.com/zhangliqiang/confluence-docker
 
 ADD jar/atlassian-agent.jar /opt
 
-ADD jar/mysql-connector-java-5.1.49.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
+ADD jar/mysql-connector-j-8.1.0.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
 
 ADD windowsfonts /usr/share/fonts/windowsfonts
 
