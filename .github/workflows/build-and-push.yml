@@ -16,7 +16,7 @@ jobs:
         run: |
           TAG_NAME=8.5.22
           DOCKER_IMAGE_TAGS="--tag ${{ secrets.DOCKER_IMAGE }}:${TAG_NAME}"
-          echo ::set-output name=buildx_args::--platform linux/amd64 ${DOCKER_IMAGE_TAGS} .
+          echo ::set-output name=buildx_args::--platform linux/amd64 ${DOCKER_IMAGE_TAGS}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
