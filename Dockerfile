@@ -1,4 +1,4 @@
-FROM atlassian/confluence:8.5.21
+FROM atlassian/confluence:8.5.22
 
 MAINTAINER https://github.com/zhangliqiang/confluence-docker
 
