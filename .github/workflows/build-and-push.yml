@@ -14,7 +14,7 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          TAG_NAME=8.5.22
+          TAG_NAME=8.5.24
           DOCKER_IMAGE_TAGS="--tag ${{ secrets.DOCKER_IMAGE }}:${TAG_NAME}"
           echo ::set-output name=buildx_args::--platform linux/amd64 ${DOCKER_IMAGE_TAGS}
       - name: Set up QEMU
