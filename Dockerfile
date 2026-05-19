@@ -9,6 +9,7 @@ ADD jar/mysql-connector-j-8.4.0.jar /opt/atlassian/confluence/confluence/WEB-INF
 ADD windowsfonts /usr/share/fonts/windowsfonts
 
 RUN sed -i 's/DEBUG/INFO/g' "${CONFLUENCE_INSTALL_DIR}/confluence/WEB-INF/classes/log4j.properties" && \
+    sed -i 's/jmx-app-logger=INFO/jmx-app-logger=ERROR/' "${CONFLUENCE_INSTALL_DIR}/confluence/WEB-INF/classes/log4j.properties" && \
     echo log4j.logger.com.atlassian.confluence.synchrony.service.http=WARN >> "${CONFLUENCE_INSTALL_DIR}/confluence/WEB-INF/classes/log4j.properties" && \
     echo log4j.logger.com.atlassian.confluence.ext.code.render=ERROR >> "${CONFLUENCE_INSTALL_DIR}/confluence/WEB-INF/classes/log4j.properties"
 
